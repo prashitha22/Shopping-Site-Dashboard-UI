@@ -1,6 +1,6 @@
 import React from 'react'
 import articleImg from "../assets/images/article-img.svg"
-import starIcon from "../assets/images/star-icon.svg"
+import starIcon from "../assets/images/Star-icon.svg"
 
 const MembershipBenefits = () => {
     return (
