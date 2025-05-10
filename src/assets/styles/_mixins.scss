@@ -1,0 +1,31 @@
+// RTL
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+  #{$property}: $ltr-value;
+  body.rtl & {
+    #{$property}: $rtl-value;
+  }
+}
+
+@mixin rtl-important($property, $ltr-value, $rtl-value) {
+  #{$property}: #{$ltr-value} !important;
+  body.rtl & {
+    #{$property}: #{$rtl-value} !important;
+  }
+}
+
+$breakpoints: (
+  "xl": 1350px,
+  "lg": 1200px,
+  "md-lg": 1100px,
+  "md": 1024px,
+  "sm-md": 991px,
+  "sm": 860px,
+  "xs": 768px
+);
+
+@mixin media($size) {
+  @media screen and (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

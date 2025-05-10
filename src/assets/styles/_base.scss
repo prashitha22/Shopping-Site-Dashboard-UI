@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+} 
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+	font-family: 'Roboto';
+	color: #4F586F;
+    font-weight: normal;
+    font-style: normal;
+	font-size: 12px;
+	background: #FFF ;
+}
+
+a, a:link, a:visited {
+    outline: none;
+	text-decoration: none;	
+	-moz-tap-highlight-color: transparent; 
+	-webkit-tap-highlight-color: transparent; 
+}
+
+img {
+	border: none;
+	margin: 0px;
+	max-width: 100%;
+}
+
+ul, li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+h1 {
+	font-family: 'Roboto';
+    font-weight: bold;
+	font-size: 28px;
+	margin: 0px;
+	padding: 0px;	
+}
+
+h2 {
+	font-family: 'Roboto';
+	font-weight: normal;
+	font-size: 24px;
+	margin: 0px;
+	padding: 0px;
+}
+
+h3, h4, h5, h6 {
+	font-family: 'Roboto';
+    font-weight: normal;
+	font-size: 18px;
+	margin: 0px;
+	padding: 0px;	
+}
+
+form, input, select, textarea, p {
+	margin: 0px;
+	padding: 0;
+}
+
+textarea {
+	resize: none;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+}
+
+input::-moz-focus-inner { 
+    border: 0;
+    padding: 0;
+}
+
+article, aside, details, figcaption, figure,  
+footer, header, hgroup, menu, nav, section, time {  
+	display: block; 
+} 
+
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: var(--title-color);
+    font-family: 'Roboto';
+    font-size: 12px!important;
+    font-weight: normal;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    opacity: 1;
+    color: var(--title-color);
+    font-family: 'Roboto';
+    font-size: 12px!important;
+    font-weight: normal;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    opacity: 1;
+    color: var(--title-color);
+    font-family: 'Roboto';
+    font-size: 12px!important;
+    font-weight: normal;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--title-color);
+    font-family: 'Roboto';
+    font-size: 12px!important;
+    font-weight: normal;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--title-color);
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: normal;
+}
+
+::placeholder {
+    /* Most modern browsers support this now. */
+    color: var(--title-color);
+    font-family: 'Roboto';
+    font-size: 12px!important;
+    font-weight: normal;
+}
+
+::-webkit-input-placeholder { font-size: 18px; }
+:-moz-placeholder { font-size: 18px; }
+::-moz-placeholder { font-size: 18px; }
+:-ms-input-placeholder { font-size: 18px; }
