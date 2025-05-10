@@ -9,11 +9,7 @@ body.rtl {
     direction: rtl;
 }
 
-.step-arrow-mobile {
-    display: none;
-}
-
-.mobile-active, .close-menu {
+.step-arrow-mobile .mobile-active, .close-menu {
     display: none;
 }
 
@@ -67,6 +63,7 @@ body.rtl {
                 cursor: pointer;
                 padding: 20px 24px;
                 transition: all 0.3s ease-in-out;
+                margin-bottom: 5px;
 
                 &:hover {
                     background: $hover-color;
@@ -98,7 +95,7 @@ body.rtl {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 12px 24px;
+            padding: 14px 24px;
             border-bottom: 1px solid $border-color;
 
             .header-title {
@@ -118,10 +115,12 @@ body.rtl {
                     gap: 12px;
                     padding-right: 15px;
                     border-right: 1px solid $primary-color;
+                    cursor: pointer;
 
                     .cart {
                         position: relative;
                         min-width: 24px;
+                        cursor: pointer;
 
                         .cart-notify {
                             position: absolute;

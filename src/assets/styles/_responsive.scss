@@ -66,6 +66,10 @@
 }
 
 @include media(md) {
+  .main-container .main-section .header-section {
+    padding: 20px 24px!important;
+  }
+
   .web-active {
     display: none!important;
   }
@@ -98,6 +102,10 @@
 }
 
 @include media(sm) {
+  .main-container .main-section .header-section {
+    padding: 20px 15px !important;
+  }
+
   .steps-box {
     flex-direction: column;
   }

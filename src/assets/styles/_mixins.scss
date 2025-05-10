@@ -1,16 +1,8 @@
 // RTL
 
-@mixin rtl($property, $ltr-value, $rtl-value) {
-  #{$property}: $ltr-value;
+@mixin rtl {
   body.rtl & {
-    #{$property}: $rtl-value;
-  }
-}
-
-@mixin rtl-important($property, $ltr-value, $rtl-value) {
-  #{$property}: #{$ltr-value} !important;
-  body.rtl & {
-    #{$property}: #{$rtl-value} !important;
+    @content;
   }
 }
 

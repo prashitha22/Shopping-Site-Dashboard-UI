@@ -2,85 +2,137 @@
 @import './variables';
 
 .menu-text {
-  @include rtl(margin-left, 20px, unset);
-  @include rtl(margin-right, unset, 20px);
-}
+  margin-left: 20px;
 
-.search-icon {
-  @include rtl(margin-right, 10px, unset);
-  @include rtl(margin-left, unset, 10px);
-}
-
-.shopping-icons {
-  @include rtl(padding-right, 30px!important, unset!important);
-  @include rtl(padding-left, unset, 30px);
-  @include rtl(border-right, 1px solid $primary-color!important, 0!important);
-  @include rtl(border-left, 0, 1px solid $primary-color);
-}
-
-.main-left-content {
-  @include rtl(border-right, 1px solid $border-color, 0);
-  @include rtl(border-left, 0, 1px solid $border-color);
-}
-
-.step::after {
-  @include rtl(right, auto, unset);
-  @include rtl(left, unset!important, -41%);
-  body.rtl & {
-    transform: rotateY(180deg) translateX(3%) !important;
-    left: -38% !important;
-    right: unset !important;
+  @include rtl {
+    margin-left: unset;
+    margin-right: 20px;
   }
 }
 
+.search-icon {
+  margin-right: 10px;
+
+  @include rtl {
+    margin-right: unset;
+    margin-left: 10px;
+  }
+}
+
+.shopping-icons {
+  padding-right: 15px;
+  border-right: 1px solid var(--primary-color);
+
+  @include rtl {
+    padding-right: unset;
+    padding-left: 15px;
+    border-right: 0;
+    border-left: 1px solid var(--primary-color);
+  }
+}
+
+.main-left-content {
+  border-right: 1px solid var(--border-color);
+
+  @include rtl {
+    border-right: 0;
+    border-left: 1px solid var(--border-color);
+  }
+}
+
+.step::after {
+  right: -41%;
+
+  @include rtl {
+    right: unset!important;
+    left: 25%!important;
+    transform: rotateY(180deg) translateX(60%)!important;
+  }
+}
+
+.main-container .sidebar.open {
+    left: 0;
+
+    @include rtl {
+      left: unset;
+      right: 0;
+    }
+}
+
+
 .view-all-btn-wrap {
-  @include rtl(left, unset!important, 0!important);
-  @include rtl(right, 0!important, unset!important);
+  right: 0;
+
+  @include rtl {
+    right: unset !important;
+    left: 0 !important;
+  }
 }
 
 .product-badge {
-  @include rtl(left, 0!important, unset!important);
-  @include rtl(right, unset!important, 0!important);
-  body.rtl & {
+  left: 0;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+
+  @include rtl {
+    left: unset;
+    right: 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
   }
 }
 
 .tab-item label::after {
-  @include rtl(left, 0!important, unset!important);
-  @include rtl(right, unset, 0);
+  left: 0;
+
+  @include rtl {
+    left: unset;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .step::after {
-    body.rtl & {
-      left: -14%;
-      transform: rotateY(180deg)!important;
+    @include rtl {
+      left: 33% !important;
+      transform: rotateY(180deg);
     }
   }
 }
 
 @media screen and (max-width: 860px) {
   .step-title {
-    body.rtl & {
+    text-align: left;
+
+    @include rtl {
       text-align: right!important;
     }
   }
 
   .step-arrow-mobile {
-    @include rtl(left, 15px, unset);
-    @include rtl(right, unset, 15px);
+    left: 15px;
+
+    @include rtl {
+      left: unset;
+      right: 15px;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .sidebar.open {
-    @include rtl(left, 0, unset);
-    @include rtl(right, unset, 0);
+  .main-container .sidebar.open {
+    left: 0;
+
+    @include rtl {
+      left: unset;
+      right: 0!important;
+    }
   }
 
-  .side-bar {
-    @include rtl(left, -100%, unset);
-    @include rtl(right, unset, -100%);
+  .main-container .sidebar {
+    left: -100%;
+
+    @include rtl {
+      left: unset;
+      right: -100%!important;
+    }
   }
 }
