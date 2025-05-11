@@ -2,6 +2,9 @@ import product1 from "./assets/images/product-1.svg"
 import product2 from "./assets/images/product-2.svg"
 import product3 from "./assets/images/product-3.svg"
 
+
+// products sample data for product list
+
 const products = [
     {
         image: product1,

@@ -9,7 +9,7 @@ body.rtl {
     direction: rtl;
 }
 
-.step-arrow-mobile .mobile-active, .close-menu {
+.step-arrow-mobile, .mobile-active, .close-menu {
     display: none;
 }
 
@@ -701,7 +701,7 @@ body.rtl {
             font-weight: normal;
             color: $title-color;
             width: 100%;
-            font-family: 'Roboto';
+            font-family: $font-family;
             opacity: 60%;
             background: none;
         }

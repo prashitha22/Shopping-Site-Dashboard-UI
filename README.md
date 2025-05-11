@@ -17,6 +17,15 @@ SASS (SCSS) – CSS preprocessor for better styling organization
 📱 Responsive Design – Optimized for desktop, tablet, and mobile devices.
 
 🎨 SASS Styling – Modular, scalable, and easily customizable styles using SCSS.
+
+## Notes
+
+1. Implemented the products section by using a sample array of products 
+
+2. Switching of tabs is represented using animations.
+
+3. SVG icons implemented using sprites in all possible areas.
+
 ## 🚀 Getting Started
 
 ### Prerequisites

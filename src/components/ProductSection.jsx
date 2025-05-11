@@ -3,9 +3,9 @@ import ProductList from './ProductList'
 
 const ProductSection = () => {
 
-    const [activeTab, setActiveTab] = useState(1);
+    const [activeTab, setActiveTab] = useState(1); // st tab 1 as default
 
-    const handleTab = (tabId) => {
+    const handleTab = (tabId) => {  // function to switch tabs
         setActiveTab(tabId);
     }
 

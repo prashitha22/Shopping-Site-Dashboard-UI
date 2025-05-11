@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Search from "../components/Search"
 import ScoreCard from '../components/ScoreCard'
-import heartIcon from "../assets/images/heart-icon.svg"
-import cartIcon from "../assets/images/cart-icon.svg"
-import downArrow from "../assets/images/down-arrow.svg"
 import UserProfile from "../components/UserProfile"
-import menuIcon from "../assets/images/menu-burger.svg"
+import svgSprite from "../assets/images/svg-sprite.svg"
 
 const Header = ({isSidebarVisible, setIsSidebarVisible}) => {
 
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [direction, setDirection] = useState("ltr");
-    const [currentLanguage, setCurrentLanguage] = useState("EN");
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false); // for dropdown
+    const [direction, setDirection] = useState("ltr");  // for direction
+    const [currentLanguage, setCurrentLanguage] = useState("EN");  // change language text content
 
     const handleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -23,12 +20,12 @@ const Header = ({isSidebarVisible, setIsSidebarVisible}) => {
         setIsDropdownOpen(false);
     }
 
-    useEffect(() => {
+    useEffect(() => {  // adding rtl to the body when direction is rtl
         document.body.classList.remove("ltr", "rtl");
         document.body.classList.add(direction);
     }, [direction]);
 
-    useEffect(() => {
+    useEffect(() => {  // handling sidebar opening and closing
         const sidebar = document.querySelector(".sidebar");
 
         if (sidebar & isSidebarVisible) {
@@ -41,7 +38,9 @@ const Header = ({isSidebarVisible, setIsSidebarVisible}) => {
             <header className="header-section">
                 <div className="header-left">
                     <div className="mobile-menu-icon" style={{ display: "none" }} onClick={() => setIsSidebarVisible(!isSidebarVisible)}>
-                        <img src={menuIcon} alt="Burger Icon" />
+                    <svg width="24" height="24">
+                        <use href={`${svgSprite}#icon-menu-burger`}></use>
+                    </svg>
                     </div>
                     <h2 className="header-title">Hi, John!</h2>
                 </div>
@@ -53,15 +52,21 @@ const Header = ({isSidebarVisible, setIsSidebarVisible}) => {
                         <ScoreCard />
                     </div>
                     <div className="shopping-icons">
-                        <img src={heartIcon} alt="Heart Icon" />
+                        <svg width="24" height="24" fill='none'>
+                            <use href={`${svgSprite}#icon-heart-icon`}></use>
+                        </svg>
                         <div className="cart">
-                            <img src={cartIcon} alt="Cart Icon" />
+                            <svg width="24" height="24" fill='none'>
+                                <use href={`${svgSprite}#icon-cart-icon`}></use>
+                            </svg>
                             <span className="cart-notify"></span>
                         </div>
                         <div className="language-icon">
                             <div className={`language-content ${isDropdownOpen ? "open" : ""}`} onClick={handleDropdown}>
                                 <span className="language">{currentLanguage}</span>
-                                <img src={downArrow} alt="arrow" />
+                                <svg width="9" height="5" fill='none'>
+                                    <use href={`${svgSprite}#icon-down-arrow`}></use>
+                                </svg>
                             </div>
                             <div className={`dropdown-menu language-menu ${isDropdownOpen ? "open" : ""}`} style={{ display: "none" }}>
                                 <ul>

@@ -1,3 +1,5 @@
+@import './variables';
+
 * {
     box-sizing: border-box;
 } 
@@ -10,12 +12,12 @@ html, body {
 }
 
 body {
-	font-family: 'Roboto';
-	color: #4F586F;
+	font-family: $font-family;
+	color: $para-color;
     font-weight: normal;
     font-style: normal;
 	font-size: 12px;
-	background: #FFF ;
+	background: $white-color;
 }
 
 a, a:link, a:visited {
@@ -38,7 +40,7 @@ ul, li {
 }
 
 h1 {
-	font-family: 'Roboto';
+	font-family: $font-family;
     font-weight: bold;
 	font-size: 28px;
 	margin: 0px;
@@ -46,7 +48,7 @@ h1 {
 }
 
 h2 {
-	font-family: 'Roboto';
+	font-family: $font-family;
 	font-weight: normal;
 	font-size: 24px;
 	margin: 0px;
@@ -54,7 +56,7 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-	font-family: 'Roboto';
+	font-family: $font-family;
     font-weight: normal;
 	font-size: 18px;
 	margin: 0px;
@@ -87,8 +89,8 @@ footer, header, hgroup, menu, nav, section, time {
 
 ::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
-    color: var(--title-color);
-    font-family: 'Roboto';
+    color: $title-color;
+    font-family: $font-family;
     font-size: 12px!important;
     font-weight: normal;
 }
@@ -96,8 +98,8 @@ footer, header, hgroup, menu, nav, section, time {
 :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
     opacity: 1;
-    color: var(--title-color);
-    font-family: 'Roboto';
+    color: $title-color;
+    font-family: $font-family;
     font-size: 12px!important;
     font-weight: normal;
 }
@@ -105,32 +107,32 @@ footer, header, hgroup, menu, nav, section, time {
 ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     opacity: 1;
-    color: var(--title-color);
-    font-family: 'Roboto';
+    color: $title-color;
+    font-family: $font-family;
     font-size: 12px!important;
     font-weight: normal;
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: var(--title-color);
-    font-family: 'Roboto';
+    color: $title-color;
+    font-family: $font-family;
     font-size: 12px!important;
     font-weight: normal;
 }
 
 ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: var(--title-color);
-    font-family: 'Roboto';
+    color: $title-color;
+    font-family: $font-family;
     font-size: 12px;
     font-weight: normal;
 }
 
 ::placeholder {
     /* Most modern browsers support this now. */
-    color: var(--title-color);
-    font-family: 'Roboto';
+    color: $title-color;
+    font-family: $font-family;
     font-size: 12px!important;
     font-weight: normal;
 }

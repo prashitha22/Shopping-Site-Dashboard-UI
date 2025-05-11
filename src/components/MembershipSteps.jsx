@@ -1,10 +1,5 @@
 import React from 'react'
-import loginIcon from "../assets/images/login-icon.svg"
-import memberIcon from "../assets/images/member-profile.svg"
-import subscriptionIcon from "../assets/images/subscription.svg"
-import paymentIcon from "../assets/images/payments.svg"
-import activeMemberIcon from "../assets/images/active-membership.svg"
-import dotDownArrow from "../assets/images/dot-down-arrow.svg"
+import svgSprite from "../assets/images/svg-sprite.svg"
 
 const MembershipSteps = () => {
     return (
@@ -14,43 +9,61 @@ const MembershipSteps = () => {
                 <div className="white-card-box steps-box">
                     <div className="step">
                         <div className="step-icon-box">
-                            <img src={loginIcon} alt="Login Icon" />
+                            <svg width="24" height="24" fill='none'>
+                                <use href={`${svgSprite}#icon-login-icon`}></use>
+                            </svg>
                         </div>
                         <span className="step-title">Login or Signup</span>
                     </div>
                     <div class="step-arrow-mobile">
-                        <img src={dotDownArrow} alt="Arrow"/>
+                        <svg width="8" height="33" fill='none'>
+                            <use href={`${svgSprite}#icon-dot-down-arrow`}></use>
+                        </svg>
                     </div>
                     <div className="step">
                         <div className="step-icon-box">
-                            <img src={memberIcon} alt="Membership Profile Icon" />
+                            <svg width="24" height="24" fill='none'>
+                                <use href={`${svgSprite}#icon-member-profile`}></use>
+                            </svg>
                         </div>
                         <span className="step-title">Membership in Profile</span>
                     </div>
                     <div class="step-arrow-mobile">
-                        <img src={dotDownArrow} alt="Arrow"/>
+                        <svg width="8" height="33" fill='none'>
+                            <use href={`${svgSprite}#icon-dot-down-arrow`}></use>
+                        </svg>
                     </div>
                     <div className="step">
                         <div className="step-icon-box">
-                            <img src={subscriptionIcon} alt="Subscription Icon" />
+                            <svg width="24" height="24" fill='none'>
+                                <use href={`${svgSprite}#icon-subscription`}></use>
+                            </svg>
                         </div>
                         <span className="step-title">Select a Subscription</span>
                     </div>
                     <div class="step-arrow-mobile">
-                        <img src={dotDownArrow} alt="Arrow"/>
+                        <svg width="8" height="33" fill='none'>
+                            <use href={`${svgSprite}#icon-dot-down-arrow`}></use>
+                        </svg>
                     </div>
                     <div className="step">
                         <div className="step-icon-box">
-                            <img src={paymentIcon} alt="Payment Icon" />
+                            <svg width="24" height="24" fill='none'>
+                                <use href={`${svgSprite}#icon-payments`}></use>
+                            </svg>
                         </div>
                         <span className="step-title">Pay the Bill</span>
                     </div>
                     <div class="step-arrow-mobile">
-                        <img src={dotDownArrow} alt="Arrow"/>
+                        <svg width="8" height="33" fill='none'>
+                            <use href={`${svgSprite}#icon-dot-down-arrow`}></use>
+                        </svg>
                     </div>
                     <div className="step last-step">
                         <div className="step-icon-box">
-                            <img src={activeMemberIcon} alt="Active Membership Icon" />
+                            <svg width="24" height="24" fill='none'>
+                                <use href={`${svgSprite}#icon-active-membership`}></use>
+                            </svg>
                         </div>
                         <span className="step-title">Get the Membership</span>
                     </div>

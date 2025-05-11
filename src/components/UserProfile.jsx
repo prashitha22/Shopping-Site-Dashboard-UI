@@ -1,7 +1,7 @@
 import React from 'react'
 import userIcon from "../assets/images/user-img.svg"
-import downArrow from "../assets/images/down-arrow.svg"
 import { useState } from 'react'
+import svgSprite from "../assets/images/svg-sprite.svg"
 
 const UserProfile = () => {
 
@@ -18,7 +18,9 @@ const UserProfile = () => {
                     <img src={userIcon} alt="User Icon" />
                 </div>
                 <span className="user-name">John Paul</span>
-                <img src={downArrow} alt="Down Arrow" />
+                <svg width="9" height="5" fill='none'>
+                    <use href={`${svgSprite}#icon-down-arrow`}></use>
+                </svg>
                 <div className={`dropdown-menu user-menu ${isDropdownOpen ? "open" : ""}`} style={{ display: "none" }}>
                     <ul>
                         <li>Profile</li>

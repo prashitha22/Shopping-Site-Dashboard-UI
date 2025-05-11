@@ -1,6 +1,9 @@
 import React from "react";
 import RatingCount from "./RatingCount";
 
+
+// Product Card
+
 const ProductCard = ({item}) => {
     console.log(item)
   return (

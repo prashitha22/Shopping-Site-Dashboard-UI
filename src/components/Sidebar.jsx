@@ -1,8 +1,4 @@
-import logo from "../assets/images/Logo.svg"
-import memberIcon from "../assets/images/member-icon.svg"
-import dashboardIcon from "../assets/images/dashboard-icon.svg"
-import orderIcon from "../assets/images/order-icon.svg"
-import helpIcon from "../assets/images/help-icon.svg"
+import svgSprite from "../assets/images/svg-sprite.svg"
 
 
 const Sidebar = ({isSidebarVisible, setIsSidebarVisible}) => {
@@ -11,24 +7,34 @@ const Sidebar = ({isSidebarVisible, setIsSidebarVisible}) => {
         <>
             <aside className={`sidebar ${isSidebarVisible ? "open" : ""}`}>
                 <div className="logo" >
-                    <img src={logo} alt="Logo" onClick={() => setIsSidebarVisible(!isSidebarVisible)}/>
+                    <svg width="32" height="32" onClick={() => setIsSidebarVisible(!isSidebarVisible)}>
+                        <use href={`${svgSprite}#icon-logo`}></use>
+                    </svg>
                 </div>
                 <nav className="nav-bar">
                     <ul>
                         <li className="menu-item">
-                            <img className="menu-icon" src={memberIcon} alt="Member Icon" />
+                            <svg width="28" height="28">
+                                <use href={`${svgSprite}#icon-member-icon`}></use>
+                            </svg>
                             <span className="menu-text">Member</span>
                         </li>
                         <li className="menu-item active">
-                            <img className="menu-icon" src={dashboardIcon} alt="Dashboard Icon" />
+                            <svg width="28" height="28" fill="none">
+                                <use href={`${svgSprite}#icon-dashboard-icon`}></use>
+                            </svg>
                             <span className="menu-text">Dashboard</span>
                         </li>
                         <li className="menu-item">
-                            <img className="menu-icon" src={orderIcon} alt="Order Icon" />
+                            <svg width="28" height="28" fill="none">
+                                <use href={`${svgSprite}#icon-order-icon`}></use>
+                            </svg>
                             <span className="menu-text">Order</span>
                         </li>
                         <li className="menu-item">
-                            <img className="menu-icon" src={helpIcon} alt="Help Icon" />
+                            <svg width="28" height="28" fill="none">
+                                <use href={`${svgSprite}#icon-help-icon`}></use>
+                            </svg>
                             <span className="menu-text">Help</span>
                         </li>
                     </ul>

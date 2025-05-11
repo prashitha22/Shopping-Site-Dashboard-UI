@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 const Home = () => {
 
-    const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+    const [isSidebarVisible, setIsSidebarVisible] = useState(false); // handling sidebar
 
   return (
     <div className='main-container'>

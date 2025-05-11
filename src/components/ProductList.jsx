@@ -7,7 +7,7 @@ const ProductList = () => {
     <>
       <div className="product-list">
         {
-            products.map((item, index) => {
+            products.map((item, index) => {  // looping through products in the api.js
                 return <ProductCard key={index} item={item}/>
             })
         }
